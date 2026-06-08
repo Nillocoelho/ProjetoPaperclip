@@ -1,0 +1,82 @@
+schema: paperclip/v1
+agents:
+  analyst:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/analyst.md
+        timeoutSec: 1800
+        graceSec: 15
+  ceo:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/ceo.md
+        timeoutSec: 1800
+        graceSec: 15
+  content-strategist:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/content-strategist.md
+        timeoutSec: 1800
+        graceSec: 15
+  copywriter:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/copywriter.md
+        timeoutSec: 1800
+        graceSec: 15
+  cto:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/cto.md
+        timeoutSec: 1800
+        graceSec: 15
+  landing-page-builder:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/landing-page-builder.md
+        timeoutSec: 1800
+        graceSec: 15
+  market-researcher:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/market-researcher.md
+        timeoutSec: 1800
+        graceSec: 15
+  paid-media-specialist:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/paid-media-specialist.md
+        timeoutSec: 1800
+        graceSec: 15
+  qa-editor:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/qa-editor.md
+        timeoutSec: 1800
+        graceSec: 15
+  strategy-director:
+    adapter:
+      type: codex_local
+      config:
+        cwd: /workspace/lubit-growth-studio
+        instructionsFilePath: /workspace/lubit-growth-studio/agents/strategy-director.md
+        timeoutSec: 1800
+        graceSec: 15

@@ -1,0 +1,9 @@
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+paperclip-data/
+codex-home/
+workspace/**/output/**
+node_modules/

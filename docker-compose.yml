@@ -1,16 +1,21 @@
-﻿services:
+services:
   postgres:
     image: postgres:16-alpine
     container_name: paperclip-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: paperclip
-      POSTGRES_PASSWORD: paperclip_password
-      POSTGRES_DB: paperclip
+      POSTGRES_USER: ${POSTGRES_USER:-paperclip}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-paperclip_password}
+      POSTGRES_DB: ${POSTGRES_DB:-paperclip}
     volumes:
       - postgres-data:/var/lib/postgresql/data
     ports:
-      - "54329:5432"
+      - "${POSTGRES_PORT:-54329}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-paperclip} -d ${POSTGRES_DB:-paperclip}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   paperclip:
     build:
@@ -18,23 +23,27 @@
       dockerfile: Dockerfile
     container_name: paperclip
     restart: unless-stopped
+    init: true
     ports:
-      - "3100:3101"
+      - "${PAPERCLIP_PORT:-3100}:3101"
     env_file:
       - .env
     environment:
-      NODE_ENV: production
+      NODE_ENV: ${NODE_ENV:-production}
       PORT: 3100
       PAPERCLIP_HOME: /home/node/paperclip
       PAPERCLIP_DATA_DIR: /home/node/paperclip
       PAPERCLIP_WORKSPACE_DIR: /workspace
-      DATABASE_URL: postgresql://paperclip:paperclip_password@postgres:5432/paperclip
+      PAPERCLIP_INSTANCE_ID: ${PAPERCLIP_INSTANCE_ID:-default}
+      PAPERCLIP_IMPORT_PATH: /workspace/import-package
+      DATABASE_URL: postgresql://${POSTGRES_USER:-paperclip}:${POSTGRES_PASSWORD:-paperclip_password}@postgres:5432/${POSTGRES_DB:-paperclip}
     volumes:
       - ./paperclip-data:/home/node/paperclip
       - ./workspace:/workspace
       - ./codex-home:/home/node/.codex
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
 
 volumes:
   postgres-data:

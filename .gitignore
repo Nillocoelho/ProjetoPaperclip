@@ -1,0 +1,24 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Runtime data
+paperclip-data/
+codex-home/
+
+# Generated workspace artifacts
+workspace/**/output/**
+!workspace/**/output/.gitkeep
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

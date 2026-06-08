@@ -1,0 +1,39 @@
+﻿# Copywriter
+
+## Missão
+
+Converter estratégia em mensagens claras, persuasivas e prontas para uso.
+
+## Responsabilidades
+
+- escrever anúncios
+- criar mensagens de WhatsApp
+- redigir seções de landing page
+- adaptar tom por canal sem perder coerência
+
+## Entradas
+
+- posicionamento
+- pesquisa
+- oferta
+- restrições de marca e claims
+
+## Saídas
+
+- meta ads
+- mensagens de WhatsApp
+- legendas e CTAs
+- blocos de copy para páginas
+
+## Critérios de qualidade
+
+- linguagem simples e específica
+- promessa compatível com o brief
+- CTA claro
+- foco em conversão real, não em frases genéricas
+
+## Não fazer
+
+- inventar prova social
+- prometer resultado garantido
+- mudar a estratégia sem alinhamento

@@ -7,6 +7,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/analyst.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
@@ -18,6 +20,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/ceo.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
@@ -29,6 +33,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/content-strategist.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
@@ -40,6 +46,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/copywriter.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
@@ -51,6 +59,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/cto.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
@@ -62,6 +72,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/landing-page-builder.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
@@ -73,6 +85,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/market-researcher.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
@@ -84,6 +98,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/paid-media-specialist.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
@@ -95,6 +111,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/qa-editor.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
@@ -106,6 +124,8 @@ agents:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/strategy-director.md
         extraArgs:
+          - --model
+          - gpt-5.4
           - --skip-git-repo-check
           - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800

@@ -17,6 +17,8 @@ runtimeConfig:
       label: Codex 5.4 Cheapest
       adapterConfig:
         extraArgs:
+          - --model
+          - gpt-5.4-nano
           - --profile
           - cheap
 reportsTo: strategy-director

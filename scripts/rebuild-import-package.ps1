@@ -303,6 +303,8 @@ foreach ($agentFile in $agentFiles) {
   $agentFrontmatter += "      label: Codex 5.4 Cheapest"
   $agentFrontmatter += "      adapterConfig:"
   $agentFrontmatter += "        extraArgs:"
+  $agentFrontmatter += "          - --model"
+  $agentFrontmatter += "          - gpt-5.4-nano"
   $agentFrontmatter += "          - --profile"
   $agentFrontmatter += "          - cheap"
 
@@ -337,6 +339,8 @@ $agentSourceContent
   $paperclipConfigLines += "        cwd: /workspace/lubit-growth-studio"
   $paperclipConfigLines += "        instructionsFilePath: /workspace/lubit-growth-studio/agents/$slug.md"
   $paperclipConfigLines += "        extraArgs:"
+  $paperclipConfigLines += "          - --model"
+  $paperclipConfigLines += "          - gpt-5.4"
   $paperclipConfigLines += "          - --skip-git-repo-check"
   $paperclipConfigLines += "          - --dangerously-bypass-approvals-and-sandbox"
   $paperclipConfigLines += "        timeoutSec: 1800"

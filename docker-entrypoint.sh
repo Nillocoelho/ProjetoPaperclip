@@ -76,6 +76,16 @@ SET budget_monthly_cents = CASE
 WHERE adapter_type = 'codex_local';
 
 UPDATE agents
+SET adapter_config = jsonb_set(
+      COALESCE(adapter_config, '{}'::jsonb),
+      '{extraArgs}',
+      '["--model","gpt-5.4","--skip-git-repo-check","--dangerously-bypass-approvals-and-sandbox"]'::jsonb,
+      true
+    ),
+    updated_at = NOW()
+WHERE adapter_type = 'codex_local';
+
+UPDATE agents
 SET runtime_config = jsonb_set(
   jsonb_set(
     COALESCE(runtime_config, '{}'::jsonb),
@@ -84,7 +94,7 @@ SET runtime_config = jsonb_set(
     true
   ),
   '{modelProfiles}',
-  COALESCE(runtime_config->'modelProfiles', '{}'::jsonb) || '{"cheap":{"enabled":true,"label":"Codex 5.4 Cheapest","adapterConfig":{"extraArgs":["--profile","cheap"]}}}'::jsonb,
+  COALESCE(runtime_config->'modelProfiles', '{}'::jsonb) || '{"cheap":{"enabled":true,"label":"Codex 5.4 Cheapest","adapterConfig":{"extraArgs":["--model","gpt-5.4-nano","--profile","cheap"]}}}'::jsonb,
   true
 )
 WHERE adapter_type = 'codex_local';

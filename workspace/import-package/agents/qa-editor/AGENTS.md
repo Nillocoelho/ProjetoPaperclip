@@ -2,6 +2,7 @@
 name: QA Editor
 slug: qa-editor
 title: QA Editor
+budgetMonthlyCents: 300
 role: qa
 runtimeConfig:
   heartbeat:

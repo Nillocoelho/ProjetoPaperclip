@@ -82,6 +82,10 @@ function Get-TitleCaseName {
 $workspaceRoot = Resolve-FullPath -Path $WorkspaceRoot
 $outputRoot = Resolve-FullPath -Path $OutputRoot
 
+$defaultCompanyBudgetCents = 5000
+$leadAgentBudgetCents = 700
+$executionAgentBudgetCents = 300
+
 if (-not (Test-Path $workspaceRoot)) {
   throw "Workspace not found: $workspaceRoot"
 }
@@ -245,6 +249,7 @@ $companyFrontmatter = @(
   "name: Lubit Growth Studio",
   "slug: lubit-growth-studio",
   "description: Agencia de marketing digital operada com Paperclip e Codex.",
+  "budgetMonthlyCents: $defaultCompanyBudgetCents",
   "goals:",
   "  - Operar a agencia com clareza, consistencia e rastreabilidade.",
   "  - Reaproveitar workflows, templates e papeis sem reinventar processo.",
@@ -267,10 +272,17 @@ foreach ($agentFile in $agentFiles) {
     throw "Missing metadata for agent '$slug'"
   }
 
+  $agentBudgetCents = if ($meta.Role -in @("ceo", "cto", "cmo")) {
+    $leadAgentBudgetCents
+  } else {
+    $executionAgentBudgetCents
+  }
+
   $agentFrontmatter = @(
     "name: $($meta.Name)",
     "slug: $slug",
-    "title: $($meta.Title)"
+    "title: $($meta.Title)",
+    "budgetMonthlyCents: $agentBudgetCents"
   )
 
   if ($meta.Role) {

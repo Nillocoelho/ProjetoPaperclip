@@ -2,6 +2,7 @@
 name: Strategy Director
 slug: strategy-director
 title: Strategy Director
+budgetMonthlyCents: 700
 role: cmo
 runtimeConfig:
   heartbeat:

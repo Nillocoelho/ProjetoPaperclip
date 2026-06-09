@@ -2,6 +2,7 @@
 name: CEO
 slug: ceo
 title: Chief Executive Officer
+budgetMonthlyCents: 700
 role: ceo
 runtimeConfig:
   heartbeat:

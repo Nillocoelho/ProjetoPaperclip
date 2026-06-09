@@ -2,6 +2,7 @@
 name: Paid Media Specialist
 slug: paid-media-specialist
 title: Paid Media Specialist
+budgetMonthlyCents: 300
 runtimeConfig:
   heartbeat:
     enabled: true

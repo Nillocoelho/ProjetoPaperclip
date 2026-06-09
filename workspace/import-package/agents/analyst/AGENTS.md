@@ -2,6 +2,7 @@
 name: Analyst
 slug: analyst
 title: Analyst
+budgetMonthlyCents: 300
 runtimeConfig:
   heartbeat:
     enabled: true

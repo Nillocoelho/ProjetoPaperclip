@@ -3,6 +3,7 @@ schema: agentcompanies/v1
 name: Lubit Growth Studio
 slug: lubit-growth-studio
 description: Agencia de marketing digital operada com Paperclip e Codex.
+budgetMonthlyCents: 5000
 goals:
   - Operar a agencia com clareza, consistencia e rastreabilidade.
   - Reaproveitar workflows, templates e papeis sem reinventar processo.

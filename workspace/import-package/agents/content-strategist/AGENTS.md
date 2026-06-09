@@ -2,6 +2,7 @@
 name: Content Strategist
 slug: content-strategist
 title: Content Strategist
+budgetMonthlyCents: 300
 runtimeConfig:
   heartbeat:
     enabled: true

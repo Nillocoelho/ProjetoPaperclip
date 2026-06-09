@@ -2,6 +2,7 @@
 name: Market Researcher
 slug: market-researcher
 title: Market Researcher
+budgetMonthlyCents: 300
 role: researcher
 runtimeConfig:
   heartbeat:

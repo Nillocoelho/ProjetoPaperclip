@@ -2,6 +2,7 @@
 name: Copywriter
 slug: copywriter
 title: Copywriter
+budgetMonthlyCents: 300
 runtimeConfig:
   heartbeat:
     enabled: true

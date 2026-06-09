@@ -2,6 +2,7 @@
 name: Landing Page Builder
 slug: landing-page-builder
 title: Landing Page Builder
+budgetMonthlyCents: 300
 runtimeConfig:
   heartbeat:
     enabled: true

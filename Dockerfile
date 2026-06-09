@@ -1,6 +1,6 @@
 FROM node:22-alpine
 
-RUN apk add --no-cache socat git bash python3 make g++ ripgrep
+RUN apk add --no-cache socat git bash python3 make g++ ripgrep postgresql16-client
 RUN npm install -g paperclipai @openai/codex
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh

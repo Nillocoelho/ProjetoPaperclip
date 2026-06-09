@@ -2,6 +2,7 @@
 name: CTO
 slug: cto
 title: Chief Technology Officer
+budgetMonthlyCents: 700
 role: cto
 runtimeConfig:
   heartbeat:

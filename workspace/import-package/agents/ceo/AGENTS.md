@@ -3,6 +3,22 @@ name: CEO
 slug: ceo
 title: Chief Executive Officer
 role: ceo
+runtimeConfig:
+  heartbeat:
+    enabled: true
+    intervalSec: 0
+    wakeOnAssignment: true
+    wakeOnOnDemand: true
+    wakeOnAutomation: false
+    maxConcurrentRuns: 1
+  modelProfiles:
+    cheap:
+      enabled: true
+      label: Codex 5.4 Cheapest
+      adapterConfig:
+        extraArgs:
+          - --profile
+          - cheap
 reportsTo: null
 skills:
   - workflow-onboard-client

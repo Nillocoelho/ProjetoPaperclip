@@ -277,6 +277,23 @@ foreach ($agentFile in $agentFiles) {
     $agentFrontmatter += "role: $($meta.Role)"
   }
 
+  $agentFrontmatter += "runtimeConfig:"
+  $agentFrontmatter += "  heartbeat:"
+  $agentFrontmatter += "    enabled: true"
+  $agentFrontmatter += "    intervalSec: 0"
+  $agentFrontmatter += "    wakeOnAssignment: true"
+  $agentFrontmatter += "    wakeOnOnDemand: true"
+  $agentFrontmatter += "    wakeOnAutomation: false"
+  $agentFrontmatter += "    maxConcurrentRuns: 1"
+  $agentFrontmatter += "  modelProfiles:"
+  $agentFrontmatter += "    cheap:"
+  $agentFrontmatter += "      enabled: true"
+  $agentFrontmatter += "      label: Codex 5.4 Cheapest"
+  $agentFrontmatter += "      adapterConfig:"
+  $agentFrontmatter += "        extraArgs:"
+  $agentFrontmatter += "          - --profile"
+  $agentFrontmatter += "          - cheap"
+
   if ($null -eq $meta.ReportsTo) {
     $agentFrontmatter += "reportsTo: null"
   } else {
@@ -307,6 +324,9 @@ $agentSourceContent
   $paperclipConfigLines += "      config:"
   $paperclipConfigLines += "        cwd: /workspace/lubit-growth-studio"
   $paperclipConfigLines += "        instructionsFilePath: /workspace/lubit-growth-studio/agents/$slug.md"
+  $paperclipConfigLines += "        extraArgs:"
+  $paperclipConfigLines += "          - --skip-git-repo-check"
+  $paperclipConfigLines += "          - --dangerously-bypass-approvals-and-sandbox"
   $paperclipConfigLines += "        timeoutSec: 1800"
   $paperclipConfigLines += "        graceSec: 15"
 }

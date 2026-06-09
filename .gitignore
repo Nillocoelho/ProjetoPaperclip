@@ -2,10 +2,12 @@
 .env
 .env.*
 !.env.example
+!.env.prod.example
 
 # Runtime data
 paperclip-data/
 codex-home/
+deploy-data/
 
 # Generated workspace artifacts
 workspace/**/output/**

@@ -2,6 +2,22 @@
 name: Analyst
 slug: analyst
 title: Analyst
+runtimeConfig:
+  heartbeat:
+    enabled: true
+    intervalSec: 0
+    wakeOnAssignment: true
+    wakeOnOnDemand: true
+    wakeOnAutomation: false
+    maxConcurrentRuns: 1
+  modelProfiles:
+    cheap:
+      enabled: true
+      label: Codex 5.4 Cheapest
+      adapterConfig:
+        extraArgs:
+          - --profile
+          - cheap
 reportsTo: strategy-director
 skills:
   - workflow-create-measurement-plan

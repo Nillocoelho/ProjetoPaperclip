@@ -6,6 +6,9 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/analyst.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15
   ceo:
@@ -14,6 +17,9 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/ceo.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15
   content-strategist:
@@ -22,6 +28,9 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/content-strategist.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15
   copywriter:
@@ -30,6 +39,9 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/copywriter.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15
   cto:
@@ -38,6 +50,9 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/cto.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15
   landing-page-builder:
@@ -46,6 +61,9 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/landing-page-builder.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15
   market-researcher:
@@ -54,6 +72,9 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/market-researcher.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15
   paid-media-specialist:
@@ -62,6 +83,9 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/paid-media-specialist.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15
   qa-editor:
@@ -70,6 +94,9 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/qa-editor.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15
   strategy-director:
@@ -78,5 +105,8 @@ agents:
       config:
         cwd: /workspace/lubit-growth-studio
         instructionsFilePath: /workspace/lubit-growth-studio/agents/strategy-director.md
+        extraArgs:
+          - --skip-git-repo-check
+          - --dangerously-bypass-approvals-and-sandbox
         timeoutSec: 1800
         graceSec: 15

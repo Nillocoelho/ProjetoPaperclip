@@ -3,6 +3,22 @@ name: Market Researcher
 slug: market-researcher
 title: Market Researcher
 role: researcher
+runtimeConfig:
+  heartbeat:
+    enabled: true
+    intervalSec: 0
+    wakeOnAssignment: true
+    wakeOnOnDemand: true
+    wakeOnAutomation: false
+    maxConcurrentRuns: 1
+  modelProfiles:
+    cheap:
+      enabled: true
+      label: Codex 5.4 Cheapest
+      adapterConfig:
+        extraArgs:
+          - --profile
+          - cheap
 reportsTo: strategy-director
 skills:
   - workflow-create-audience-research

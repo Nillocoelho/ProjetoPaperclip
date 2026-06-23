@@ -1,10 +1,10 @@
-﻿# Estrutura Organizacional
+# Estrutura Organizacional
 
 ## Objetivo
 
 Definir a estrutura oficial da Lubit Growth Studio sem ambiguidade de comando ou sobreposição de papéis.
 
-## Agentes oficiais
+## Agentes oficiais atuais
 
 ### CEO
 
@@ -22,22 +22,6 @@ Responsável por mapear audiência, dores, desejos, objeções, concorrentes e o
 
 Responsável por anúncios, mensagens de WhatsApp, legendas, CTAs, landing pages e outras copies de conversão.
 
-### Paid Media Specialist
-
-Responsável por estratégia e estrutura de campanhas Meta Ads e Google Ads, hipóteses de mídia e testes.
-
-### Content Strategist
-
-Responsável por calendário editorial, linhas de conteúdo, pautas, distribuição e reaproveitamento.
-
-### Landing Page Builder
-
-Responsável por wireframes textuais, estrutura de página, seções, CTAs e protótipos simples.
-
-### Analyst
-
-Responsável por KPIs, relatórios, plano de medição, leitura de sinais e recomendações.
-
 ### QA Editor
 
 Responsável por revisar entregáveis, bloquear materiais frágeis e apontar riscos de clareza, promessa e aderência ao brief.
@@ -46,24 +30,34 @@ Responsável por revisar entregáveis, bloquear materiais frágeis e apontar ris
 
 Responsável por infraestrutura técnica, Paperclip, Codex, Docker, automações e documentação técnica.
 
+### Runtime Supervisor
+
+Responsável por fiscalizar a saúde operacional da agência, detectar loops, retries improdutivos, stranded tasks, adapter failures, limites de uso e duplicação de tarefas.
+
 ## Cadeia de decisão
 
 ```text
 CEO
-|
-+-- Strategy Director
-|   |
-|   +-- Market Researcher
-|   +-- Copywriter
-|   +-- Paid Media Specialist
-|   +-- Content Strategist
-|   +-- Landing Page Builder
-|   +-- Analyst
-|
-+-- QA Editor
-|
-+-- CTO
+├── Strategy Director
+├── Market Researcher
+├── Copywriter
+├── QA Editor
+├── CTO
+└── Runtime Supervisor
 ```
+
+## Agentes futuros
+
+- `Paid Media Specialist`
+- `Content Strategist`
+- `Landing Page Builder`
+- `Analyst`
+
+## Relação entre Runtime Supervisor, CTO e CEO
+
+- O `Runtime Supervisor` detecta incidentes, consolida evidências e recomenda a próxima ação.
+- O `CTO` corrige problemas técnicos de Paperclip, Codex, Docker, adaptadores, automações e repositório.
+- O `CEO` decide prioridades, conflitos operacionais, espera, custo e encerramento de tarefas quando houver impacto de negócio.
 
 ## Regras de governança
 
@@ -71,6 +65,7 @@ CEO
 - O `Strategy Director` lidera a operação de marketing por cliente.
 - O `QA Editor` tem autonomia para devolver entregáveis sem qualidade suficiente.
 - O `CTO` atende a operação como suporte técnico e não entra na linha de aprovação de marketing.
+- O `Runtime Supervisor` não substitui o `CTO`; ele detecta e recomenda.
 - Novos papéis só devem ser criados quando houver um gargalo recorrente, escopo claro e entregáveis próprios.
 
 ## Papéis que devem ser evitados como oficiais

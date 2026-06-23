@@ -1,4 +1,4 @@
-﻿# AGENTS.md
+# AGENTS.md
 
 ## Contexto da agência
 
@@ -25,12 +25,27 @@ Este workspace existe para produzir entregáveis de cliente com clareza, consist
 - `Strategy Director`
 - `Market Researcher`
 - `Copywriter`
+- `QA Editor`
+- `CTO`
+- `Runtime Supervisor`
+
+## Runtime Supervisor and Operational Safety
+
+- `Runtime Supervisor` é agente oficial da Lubit Growth Studio.
+- O `Runtime Supervisor` fiscaliza saúde operacional, loops, retries improdutivos, stranded tasks, usage limits, adapter failures e duplicação de tarefas.
+- Agentes devem escalar para o `Runtime Supervisor` em caso de `recovery needed`, `high churn`, `stranded task`, `adapter failure`, `usage limit`, `login expired`, erro de modelo duplicado ou tarefa duplicada.
+- Nenhum agente deve ficar tentando em loop quando não há progresso real.
+- Nenhum agente deve criar subtarefas duplicadas para contornar erro técnico.
+- Decisões técnicas vão para o `CTO`.
+- Decisões operacionais vão para o `CEO`.
+- Qualidade final vai para o `QA Editor`.
+
+## Especializações futuras
+
 - `Paid Media Specialist`
 - `Content Strategist`
 - `Landing Page Builder`
 - `Analyst`
-- `QA Editor`
-- `CTO`
 
 ## Estrutura mínima por cliente
 
@@ -75,3 +90,4 @@ Todo handoff entre agentes deve incluir:
 - arquivos usados ou atualizados
 - pendências
 - próxima ação recomendada
+- owner recomendado

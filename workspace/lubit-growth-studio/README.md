@@ -1,4 +1,4 @@
-﻿# Lubit Growth Studio
+# Lubit Growth Studio
 
 Lubit Growth Studio é a base operacional de uma agência de marketing digital real executada com Paperclip + Codex.
 
@@ -15,14 +15,18 @@ Lubit Growth Studio é a base operacional de uma agência de marketing digital r
 - `Strategy Director`
 - `Market Researcher`
 - `Copywriter`
+- `QA Editor`
+- `CTO`
+- `Runtime Supervisor`
+
+As instruções oficiais de cada papel ficam em `agents/`. O `Runtime Supervisor` monitora a saúde operacional da agência e impede loops, retries improdutivos, tarefas travadas e duplicação de trabalho.
+
+## Especializações futuras
+
 - `Paid Media Specialist`
 - `Content Strategist`
 - `Landing Page Builder`
 - `Analyst`
-- `QA Editor`
-- `CTO`
-
-As instruções oficiais de cada papel ficam em `agents/`.
 
 ## Regras operacionais
 
@@ -30,6 +34,7 @@ As instruções oficiais de cada papel ficam em `agents/`.
 - Todo documento deve separar `Fatos confirmados`, `Hipóteses` e `Recomendações` quando houver risco de inferência.
 - Nenhum entregável é considerado final sem revisão do `QA Editor`.
 - O `CTO` cuida apenas da parte técnica, documentação, automações e organização do repositório.
+- O `Runtime Supervisor` cuida apenas da saúde operacional: loops, retries, stranded tasks, limites de uso, adapter failures e duplicação de tarefas.
 - Nomes antigos como `CMO` e `CMO 2` podem existir no histórico, mas não são papéis oficiais desta versão base.
 
 ## Estrutura principal
@@ -66,5 +71,7 @@ Arquivos já existentes preservados:
 - `agency/file-structure.md`
 - `agency/quality-bar.md`
 - `agency/handoff-protocol.md`
+- `agency/runtime-supervisor-protocol.md`
+- `agency/codex-usage-limit-protocol.md`
 - `agency/cleanup-notes.md`
 - `agency/next-actions.md`

@@ -1,4 +1,4 @@
-# Paperclip Agencia
+# Paperclip Agencia (LUBIT GROWTH)
 
 Base Docker para operar a Lubit Growth Studio com `paperclipai`, Codex, Postgres e um workspace versionado.
 
